@@ -1,0 +1,27 @@
+.info__breadcrumb {
+  opacity: 0;
+  animation: infoStart 1s ease-out 1s;
+  animation-fill-mode: forwards;
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: 900;
+      &:after {
+        content: "/";
+        margin: 0px 2px;
+      }
+      &:last-child {
+        font-weight: 400;
+        &:after {
+          content: "";
+        }
+      }
+    }
+  }
+}

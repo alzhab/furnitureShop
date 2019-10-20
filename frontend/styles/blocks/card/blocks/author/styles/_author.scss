@@ -1,0 +1,10 @@
+.author {
+  background: #ecebec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@import "./author__avatar";
+@import "./author__info";

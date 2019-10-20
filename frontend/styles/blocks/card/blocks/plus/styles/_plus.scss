@@ -1,0 +1,78 @@
+.plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: $active-color;
+    animation: plusHeightStart 1s ease-out;
+    animation-fill-mode: forwards;
+  }
+  span {
+    font-size: 2rem;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 2px;
+      top: 50%;
+      transform: translate(100%, -50%);
+      width: 100px;
+      height: 2px;
+      background: #fff;
+      animation: plusAfter 1s ease-out 0.5s;
+      animation-fill-mode: forwards;
+    }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 43%;
+      top: 12px;
+      transform: translate(-50%, -100%);
+      width: 2px;
+      height: 100px;
+      background: #fff;
+      animation: plusBefore 1s ease-out 0.5s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes plusAfter {
+  0% {
+    width: 100px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+@keyframes plusBefore {
+  0% {
+    height: 100px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+@keyframes plusHeightStart {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}

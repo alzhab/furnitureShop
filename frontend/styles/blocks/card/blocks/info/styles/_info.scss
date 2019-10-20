@@ -1,0 +1,21 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  background: #f5f4f6;
+  padding: 75px 90px;
+  box-sizing: border-box;
+  color: #4c5661;
+}
+
+@keyframes infoStart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@import "./info__breadcrumb";
+@import "./info__title";
+@import "./info__body";

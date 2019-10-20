@@ -1,0 +1,57 @@
+.card {
+  width: 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 35% 15%;
+  grid-template-rows: repeat(4, 25%);
+  border-radius: 30px;
+  overflow: hidden;
+  animation: cardWidth 1s ease-out;
+  animation-fill-mode: forwards;
+  transform-origin: top left;
+}
+
+.card__product {
+  grid-row: 1 / -1;
+}
+
+.card__info {
+  grid-column: 2 / 2;
+  grid-row: 1 / 4;
+}
+
+.card__author {
+  grid-column: 2 / 2;
+  grid-row: 4 / 4;
+}
+
+.card__navbar {
+  grid-column: 3 / -1;
+  grid-row: 1 / 1;
+}
+
+.card__theme {
+  grid-column: 3 / -1;
+  grid-row: 2 / 4;
+}
+
+.card__plus {
+  grid-column: 3 / -1;
+  grid-row: 4 / -1;
+}
+
+@keyframes cardWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@import "../blocks/product/styles/product";
+@import "../blocks/info/styles/info";
+@import "../blocks/author/styles/author";
+@import "../blocks/navbar/styles/navbar";
+@import "../blocks/plus/styles/plus";
+@import "../blocks/theme/styles/theme";
